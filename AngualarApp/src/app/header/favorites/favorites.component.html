@@ -1,0 +1,24 @@
+<div class="product-set">
+  <div *ngFor="let product of onlyFavProducts">
+    <div *ngIf="product!=null">
+      <div class="item-card">
+        <div class="icon">
+          <mat-icon class="icon-fav-active"
+                    matTooltip="Add to favourites"
+                    matTooltipPosition="right"
+                    aria-label="icon that adds item to favourites"
+                    (click)="removeFromFavProduct(product.productId)">
+            favorite
+          </mat-icon> 
+        </div> 
+          <div class="image"><img src='{{product.productImgUrl}}' alt="item_img" class="prod"></div>
+          <div class="text">{{product.productName}}</div>
+          <div class="text">Price <b>{{'₹'+product.price}}</b></div>
+          <div class="card-buttons">
+            <button class="cart btn"><b>Cart</b></button>
+            <button class="order btn" (click)="addOrder(product.productId)"><b>Order</b></button>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>

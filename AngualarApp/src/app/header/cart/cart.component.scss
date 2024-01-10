@@ -1,0 +1,134 @@
+.product-set {
+    top: 90px;
+    z-index: 5;
+    position: relative;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    padding: 0rem 2rem;
+    margin: 0rem 5rem;
+    align-items: center;
+    overflow: auto;
+  //  background-color: blue;
+    
+    .item-card {
+      display: flex;
+      flex-direction: column;
+      // align-items: center;
+      border-radius: 5px;
+      margin: 1rem 1rem;
+      height: 337px;
+      width: 240px;
+      //cursor: pointer !important;
+      box-shadow: 4px 4px 19px 0px rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+      padding: 2rem 2rem;
+      // background-color: pink;
+  
+      .image img{
+          height: 200px;
+          width: 230px;
+          border-radius: 5px;
+          
+          // margin-top: ;
+      }
+  
+      .text {
+        padding: .2rem;
+      }
+     
+      .card-buttons{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        margin: 11px 0px;
+        .btn{
+          height:40px;
+          width: 75px;
+          border:none;
+          border-radius: 15px;
+          // box-shadow:inset 1px 0px 19px 0px rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+          background-color: black;
+          color:white;
+         
+        }
+        .btn:hover{
+          color:rgb(93, 214, 230);
+          // box-shadow:inset 1px 0px 19px 0px  rgb(153, 182, 185);
+          cursor: pointer;
+        }
+        .order{
+       
+        }
+      }
+      .icon-fav {
+        float: right;
+        font-size: 30px;
+        height: 27px;
+        width: 30px;
+        margin:0 10px 10px 0;
+        color: lightgray;
+        cursor: pointer;
+      }
+  
+      .icon-fav-active {
+        float: right;
+        font-size: 30px;
+        height: 27px;
+        width: 30px;
+        margin:0 10px 10px 0;
+        color: rgb(34, 176, 194);
+        cursor: pointer;
+  
+      }
+  
+      
+    }
+  
+    .item-card:hover {
+      background-color: whitesmoke;
+    }
+  }
+
+.orderAll{
+    position: fixed;
+    display: flex;
+    justify-content: flex-end;
+    height: 80px;
+    width: 100%;
+    background-color:rgb(93, 95, 95);;
+    bottom:0px;
+    z-index: 100;
+    align-items: center;
+    box-shadow: 0px 2px 6px 0px  rgb(124, 133, 133);
+
+    .order-btn button{
+      height: 50px;
+      width: 125px;
+      background-color: black;
+      border-radius: 50px;
+      margin : 100px;
+      color : white;
+      border: none;
+    }
+
+    .order-btn button:hover{
+      color:rgb(104, 221, 236);
+      box-shadow: 0px 2px 6px 0px  rgb(124, 133, 133);
+        cursor: pointer;
+    }
+
+}
+  
+  
+  
+  @media(max-width:1000px) {
+    .product-set {
+      grid-template-columns: auto auto;
+    }
+  }
+  
+  @media (max-width: 700px) {
+    .product-set {
+      grid-template-columns: auto;
+    }
+  }
+  

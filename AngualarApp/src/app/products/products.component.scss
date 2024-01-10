@@ -1,0 +1,124 @@
+.products{
+  position: relative;
+  top: 90px;
+  z-index: 5;
+ //   background-color: red;
+  
+  .category{
+    display: flex;
+    justify-content: space-evenly;
+    //background-color: yellow;
+    .item img{
+      height: 70px;
+      width: 70px;
+      border-radius: 50%;
+      border:1px solid black;
+    }
+  .item:hover{
+    cursor: pointer;
+    img{
+      border:none;
+      box-shadow:inset -2px -1px 15px 0px  rgb(153, 182, 185);
+    }
+    p{
+      color: rgb(93, 214, 230);
+    }
+  }
+    .category-5 p{
+      margin-left: 12px;
+    }
+  }
+
+  .product-set {
+    position: relative;
+    display: grid;
+    // grid-template-columns: auto auto auto auto;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 348px));
+
+    padding: 0rem 2rem;
+    margin: 0rem 2rem;
+    align-items: center;
+    overflow: auto;
+    // background-color: blue;
+    
+    .item-card {
+      display: flex;
+      flex-direction: column;
+      border-radius: 5px;
+      margin: 1rem 1rem;
+      height: 337px;
+      box-shadow: 4px 4px 19px 0px rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+      padding: 2rem 2rem;
+      // background-color: pink;
+
+      .image img{
+        height: 200px;
+        width: 230px;
+        border-radius: 5px;
+      }
+
+    .text {
+      padding: .2rem;
+    }
+   
+    .card-buttons{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      margin: 11px 0px;
+      .btn{
+        height:40px;
+        width: 75px;
+        border:none;
+        border-radius: 15px;
+        background-color: black;
+        color: white;
+      }
+      .btn:hover{
+        color:rgb(104, 221, 236);
+        box-shadow: 0px 2px 6px 0px  rgb(124, 133, 133);
+        cursor: pointer;
+      }
+    }
+
+    .icon{
+      .icon-fav {
+        float: right;
+        font-size: 30px;
+        height: 27px;
+        width: 30px;
+        margin:0 10px 10px 0;
+        color: rgb(148, 164, 167);
+        cursor: pointer;
+      }
+
+      .favColorChange{
+        color:rgb(13, 215, 241);
+      }
+    }
+  }
+
+    .item-card:hover {
+      background-color: whitesmoke;
+    }
+  }
+
+  @media(max-width:1000px) {
+    .product-set {
+      grid-template-columns: auto auto;
+    }
+  }
+
+  @media (max-width: 700px) {
+    .product-set {
+      grid-template-columns: auto;
+    }
+  }
+
+}
+.spinner-card{
+  position: relative;
+  top: 50%;
+  left: 50%;
+  stroke: rgb(27, 163, 218);
+}

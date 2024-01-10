@@ -1,0 +1,30 @@
+<div class="container">
+    <div><mat-icon routerLink="">close</mat-icon></div>
+    <div class="form-title"><p><strong>Login/Register</strong></p></div>
+    <form action="#" [formGroup]="authForm" (ngSubmit)="(!newUser ? LoginUser() : RegisterUser())">
+        <div class="form-item">
+            <label for="username">Enter Username :</label><br>
+            <input type="text" placeholder="username" formControlName="username">
+            <p *ngIf="authForm.controls['username'].errors?.['touched'] &&authForm.controls['username'].errors?.['dirty'] && authForm.controls['username'].errors?.['required']" class="error-msg">Field is required</p>
+        </div>
+
+        <div class="form-item" *ngIf="newUser">
+            <label for="email">Email :</label>
+            <input type="email" placeholder="email" formControlName="email">
+        </div>
+
+        <div class="form-item">
+            <label for="password">Enter Password :</label><br>
+            <input type="password" placeholder="password" formControlName="password">
+            <p *ngIf="authForm.controls['password'].errors?.['minLength']" class="error-msg">min length is 8 char</p>
+        </div>
+        <div class="form-item">
+            <label for="password">Confirm Password :</label><br>
+            <input type="password" placeholder="********" formControlName="confirmPassword">
+        </div>
+        <button class="button"><b>{{(!newUser)?'Submit':'Register'}}</b></button>
+    </form>
+    <div *ngIf="!newUser" class="switch">new user? <span (click)="createUser()">Register</span></div>
+    <div *ngIf="newUser" class="switch">already user? <span (click)="createUser()">Login</span></div>
+
+</div>

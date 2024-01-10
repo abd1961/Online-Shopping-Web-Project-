@@ -1,0 +1,8 @@
+<div class="dialog-box">
+    <div><mat-icon (click)="onCancel()">close</mat-icon></div>
+    <div mat-dialog-content class="mat-content">Are you sure, want to place Order!</div>
+    <div mat-dialog-actions class="button-set">
+        <button mat-raised-button (click)="onCancel()">Cancel</button>
+        <button mat-raised-button class="order-btn" (click)="order()" cdkFocusInitial>Order</button>
+    </div>
+</div>

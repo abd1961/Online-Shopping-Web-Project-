@@ -1,0 +1,18 @@
+<div class="chart-section">
+  <div class ="pie-chart"> <canvasjs-chart *ngIf="chartOptions" [options]="chartOptions"></canvasjs-chart>
+  </div>
+</div>
+<div class="product-set">
+  <div class="item-card" *ngFor="let product of orderedProducts;">
+    <div class="left-content item">
+        <div class="image"><img src='{{product.productImgUrl}}' alt="item_img" class="prod"></div>
+    </div>
+    <div class="right-content item">
+      <div class="text"><b>{{product.productName}}</b></div>
+      <div class="text">Price <b>{{'₹'+product.price}}</b></div>
+      <div class="text">{{product.productDescription}}</div>
+      <div class="text">Order id : {{product.orderId}}</div>
+      <div class="text">order date : {{product.orderDate|date}} | {{product.orderDate | date:'shortTime' }}</div>
+    </div>
+  </div>
+</div>

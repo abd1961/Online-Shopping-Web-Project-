@@ -1,0 +1,32 @@
+.dialog-box{
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+
+    mat-icon{
+        float: right;
+        cursor:pointer;
+        font-size: 30px;
+        margin:7px 15px;
+    }  
+    .mat-content{
+        padding: 24px 2px;
+        text-align: center;
+        //background-color: red;
+
+    }
+    .button-set{
+        //background-color: green;
+        display: flex;
+        justify-content: space-evenly;
+
+        .order-btn{
+            background-color: black;
+            color:white;
+        }
+        button{
+            margin:10px 15px;
+            border-radius: 10px
+        }
+    }
+}

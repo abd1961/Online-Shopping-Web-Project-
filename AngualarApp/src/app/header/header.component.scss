@@ -1,0 +1,124 @@
+.navbar{
+  display: flex;
+  justify-content: space-between;
+  background-color: black;
+  position: fixed;
+  top: 0;
+  height: 70px;
+  width:100%;
+  // box-shadow: 0 1px 8px #ddd;
+  box-shadow: 1px 1px 25px 1px rgba(240, 228, 238);
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  cursor: pointer;
+  z-index: 100;
+
+  .navbar-left{
+    display: flex; 
+    width: 30%;
+    justify-content: space-evenly;
+    align-items: center;
+    // background-color: red;
+
+    .nav-item00{
+      display: flex;
+      align-items: center;
+      width: 40%;
+      // background-color: yellow;
+      justify-content: space-around;
+
+      .nav-item11 img{
+        height: 30px;
+        width: 30px;
+        margin-left: 5px;
+      }
+    }
+
+    .nav-item0{
+      width: 40%;
+    }
+  }
+
+  .navbar-right{
+    display: flex;
+    width: 50%;
+    // background-color: blue;
+    justify-content: space-evenly;
+    margin-left: 20px;
+    align-items: center;
+
+
+    .nav-tab{
+        cursor: pointer;
+      }
+    
+    .nav-tab:hover {
+        color: #21b7e9;
+      }
+  }
+
+  .nav-item0{
+    position: relative;
+    // background-color: red;
+    .search-box {
+      height: 30px;
+      width: 100%;
+      border:none;
+      border-radius: 20px;
+      outline: none;
+      padding-left:12px;
+
+    }
+    .mat-icon{
+      position: absolute;
+      color: powderblue;
+      top:3px;
+      right: -4px;
+      font-size: 28px;
+      
+    }
+
+
+  }
+
+}
+
+
+  // .nav {
+  //   display: flex;
+  //   flex-direction: row;
+  //   background-color: deepskyblue;
+  //   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+  //   .nav-item {
+  //     display: flex;
+  //     flex: 10%;
+  //     padding: 1rem !important;
+  //     justify-content: center;
+  //   }
+
+  //   .nav-tab{
+  //     cursor: pointer;
+  //   }
+
+  //   .nav-tab:hover {
+  //     background-color: #21b7e9;
+  //   }
+
+  //   .login {
+  //     float: right;
+  //   }
+
+  //   .search-input {
+  //     display: flex;
+
+  //     .icon-search {
+  //       background-color: white;
+  //     }
+
+  //     .search-box {
+  //       border:none;
+  //       border:0;
+  //     }
+  //   }
+  // }

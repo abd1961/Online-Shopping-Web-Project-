@@ -1,0 +1,67 @@
+.container{
+    position: relative;
+    display:flex;
+    flex-direction: column;
+    top: 110px;
+    left: 32%;
+    //height:500px;
+    height: auto;
+    width: 400px;
+    background-color: rgb(129, 200, 209);
+    padding:1rem 2rem 3rem 2rem;
+    border-radius: 8px;
+    box-shadow: 4px 4px 19px 6px rgba(0, 0, 0, 0.2);
+
+    .form-title{
+        margin:0 5rem; 
+        text-align: center;
+        font-size: 20px;
+    }
+    .form-item{
+        padding: 0.8rem 4rem;
+
+       label{
+         font-size: 18px;
+        }
+
+        input{
+            font-size: 100%;
+            padding-left:10px;
+            height:30px;
+            width: 250px;
+            border:none;
+            border-radius: 6px;
+            margin-top: 12px;;
+
+            &::placeholder{
+                font-size: 16px;
+            }
+        }
+    }
+    .switch{
+        text-align: center;
+        span{
+            cursor: pointer;
+            color: indigo;
+            text-decoration: underline;
+        }
+    }
+    mat-icon{
+        float: right;
+        cursor:pointer;
+        font-size: 30px;
+    }
+    mat-icon:hover{
+        color:white;
+    }
+    .button{
+        margin:1rem 10rem;
+        font-size: 14px;
+        height:37px;
+        width: 85px;
+        cursor:pointer;
+        border:none;
+        border-radius: 8px;
+        box-shadow: inset 1px 0px 19px 0px rgba(0, 0, 0, 0.2);
+    }
+}

@@ -1,0 +1,23 @@
+
+
+  <div class="navbar">
+    <div class="navbar-left">
+      <div class="nav-item00" routerLink="">
+        <div class="nav-item11"><img src="../../assets/online-shopping.png" alt="OnlineShopping-img"></div>
+        <div class="title nav-item12 nav-tab"><b>OnlineShopping</b></div>
+      </div>
+      <div class="nav-item0">
+        <form class="search-input" role="search">
+         <input class="search-box" value=""type="text" placeholder="search for product" 
+         (keyup)="searchproduct($event)" #search>
+          <mat-icon class="icon-search">search</mat-icon>
+        </form>
+      </div>
+    </div>
+    <div class="navbar-right">
+      <div class="nav-item1 nav-tab" routerLink="/favorites"><b>Favourites</b></div>
+      <div class="nav-item2 nav-tab" routerLink="/cart"><b>Cart</b></div>
+      <div class="nav-item3 nav-tab" routerLink="/Orders"><b>Orders</b></div>
+      <div class="login nav-item4 nav-tab" (click)="checkLogin()"><b>{{(islogin)?'Logout':'Login / Register'}}</b></div>
+    </div>
+  </div>

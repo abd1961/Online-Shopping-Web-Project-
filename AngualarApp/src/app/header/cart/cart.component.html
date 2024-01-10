@@ -1,0 +1,22 @@
+<div>
+    <div class="product-set">
+        <div *ngFor="let product of onlyCartProducts">
+          <div *ngIf="product!=null">
+            <div class="item-card">
+                <div class="image"><img src='{{product.productImgUrl}}' alt="item_img" class="prod"></div>
+                <div class="text">{{product.productName}}</div>
+                <div class="text">Price <b>{{'₹'+product.price}}</b></div>
+                <div class="card-buttons">
+                  <button class="cart btn" (click)=removeFromCart(product)><b>Remove</b></button>
+                  <button class="order btn"><b>Order</b></button>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- to show div all cart products to order at once -->
+      <div class="orderAll">
+        <div>price</div>
+        <div class="order-btn" (click)=PlaceOrder()><button><b>Place Order</b></button></div>
+      </div>
+</div>

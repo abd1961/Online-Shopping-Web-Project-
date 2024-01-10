@@ -1,0 +1,8 @@
+<div class="dialog-box">
+    <div><mat-icon (click)="onCancel()">close</mat-icon></div>
+    <div mat-dialog-content class="mat-content">{{(!islogin)?'Please login, to use this feature':'Are you sure, want to Logout'}}</div>
+    <div mat-dialog-actions class="button-set">
+        <button mat-raised-button (click)="onCancel()">Cancel</button>
+        <button mat-raised-button class="login"(click)="onLogin()" cdkFocusInitial>{{(!islogin)?'Login':'Logout'}}</button>
+    </div>
+</div>

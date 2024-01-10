@@ -1,0 +1,39 @@
+<div *ngIf="showProgressSpinner" class="spinner-card">
+  <mat-spinner></mat-spinner>
+</div>
+<div *ngIf="!showProgressSpinner" class="products">
+<!-- <div class="products"> -->
+  <div class="category">
+    <div class="category-2 item" (click)="displayCategory($event)"><img src="../../assets/appearles.png" alt=""><p>Apparels</p></div>
+    <div class="category-1 item" (click)="displayCategory($event)"><img src="../../assets/electronics.png" alt=""><p>Electronics</p></div>
+    <div class="category-4 item" (click)="displayCategory($event)"><img src="../../assets/slippers.png" alt=""><p>Footwear</p></div>
+    <div class="category-5 item" (click)="displayCategory($event)"><img src="../../assets/sports.png" alt=""><p>Sports</p></div>
+    <div class="category-6 item" (click)="displayCategory($event)"><img src="../../assets/stationary.png" alt=""><p>Stationery</p></div>
+    <div class="category-3 item" (click)="displayCategory($event)"><img src="../../assets/homeneeds.png" alt=""><p>Home Needs</p></div>
+  </div>
+  <div class="product-set">
+    <div *ngFor="let product of allProducts;">
+      <div>
+        <div class="item-card">
+          <div class="icon">
+            <mat-icon class="icon-fav"
+                      matTooltip="Add to favourites"
+                      matTooltipPosition="right"
+                      aria-label="icon that adds item to favourites"
+                      (click)="onClickFavProduct(product)" [ngClass]="{favColorChange : matchedProduct(product)}">
+                      favorite
+            </mat-icon> 
+            <!-- {{favColor}} -->
+          </div> 
+            <div class="image"><img src='{{product.productImgUrl}}' alt="item_img" class="prod"></div>
+            <div class="text">{{product.productName}}</div>
+            <div class="text">Price <b>{{'₹'+product.price}}</b></div>
+            <div class="card-buttons">
+              <button class="cart btn" (click)="addToCart(product.productId)"><b>Cart</b></button>
+              <button class="order btn" (click)="addOrder(product.productId)"><b>Order</b></button>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
